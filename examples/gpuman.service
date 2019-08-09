@@ -1,0 +1,12 @@
+[Unit]
+Description=GPU temperature monitor
+
+[Service]
+User=root
+Group=root
+LimitNOFILE=65536
+ExecStart=/usr/local/bin/gpuman /etc/gpuman.cfg
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
